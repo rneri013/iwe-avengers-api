@@ -8,6 +8,7 @@ Scenario: Get Avenger by Id
 Given path 'avengers', 'aaaa-bbbb-cccc-dddd'
 When method get
 Then status 200
+And match response == {id: '#string', name: '#string', secretIdentity: '#string'}
 
 Scenario: Creates a new Avanger
 
@@ -15,3 +16,11 @@ Given path 'avengers'
 And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
 When method post
 Then status 201
+And match response == {id: "#string", name: "#string", secretIdentity: "#string"}
+
+Scenario: Creates a new Avenger without the required data
+
+Given path 'avengers'
+And request {name: 'Captain America'}
+When method post
+Then status 400
