@@ -4,11 +4,23 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.iwe.avenger.dynamodb.entity.Avenger;
 import com.iwe.avenger.lambda.response.HandlerResponse;
+import com.iwe.avengers.dao.AvengerDAO;
 
 public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 
+	private AvengerDAO dao = new AvengerDAO();
+	
 	@Override
 	public HandlerResponse handleRequest(final Avenger avenger, final Context context) {
-		return null;
+		
+		context.getLogger().log("[#] - Searching avenger by id: " + avenger.getId());
+		
+		final Avenger avengerFound = dao.search(avenger.getId());
+		
+		final HandlerResponse response = HandlerResponse.builder().setObjectBody(avengerFound).build();
+		
+		context.getLogger().log("[#] - Avenger found!");
+		
+		return response;
 	}
 }
