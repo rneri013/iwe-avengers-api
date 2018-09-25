@@ -3,6 +3,12 @@ Feature: Perform integrated tests on the Avengers registration API
 Background:
 * url 'https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/'
 
+Scenario: Avenger not found
+
+Given path 'avengers', 'avenger-not-found'
+When method get
+Then status 404
+
 Scenario: Get Avenger by Id
 
 Given path 'avengers', 'aaaa-bbbb-cccc-dddd'
@@ -31,7 +37,14 @@ Given path 'avengers', 'aaaa-bbbb-cccc-dddd'
 When method delete
 Then status 204
 
-Scenario: Update a Avenger by Id
+Scenario: Update a Avenger not found
+
+Given path 'avengers', 'avenger-not-found'
+And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
+When method put
+Then status 404
+
+Scenario: Update a Avenger by Data
 
 Given path 'avengers', 'aaaa-bbbb-cccc-dddd'
 And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}

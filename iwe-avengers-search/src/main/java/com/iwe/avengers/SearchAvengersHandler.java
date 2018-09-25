@@ -5,6 +5,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.iwe.avenger.dynamodb.entity.Avenger;
 import com.iwe.avenger.lambda.response.HandlerResponse;
 import com.iwe.avengers.dao.AvengerDAO;
+import com.iwe.avengers.exception.AvengerNotFoundException;
 
 public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 
@@ -20,6 +21,10 @@ public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		final HandlerResponse response = HandlerResponse.builder().setObjectBody(avengerFound).build();
 		
 		context.getLogger().log("[#] - Avenger found!");
+		
+		if(avengerFound == null) {
+            throw new AvengerNotFoundException("[NotFound] - Avenger id: " + avenger.getId());
+        }
 		
 		return response;
 	}
