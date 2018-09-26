@@ -11,9 +11,9 @@ public class CreateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 	private AvengerDAO dao = new AvengerDAO();
 	
 	@Override
-	public HandlerResponse handleRequest(final Avenger newAvenger, final Context context) {
+	public HandlerResponse handleRequest(final Avenger avenger, final Context context) {
 		
-		final Avenger avengerCreated = dao.create(newAvenger);
+		final Avenger avengerCreated = dao.save(avenger);
 		
 		final HandlerResponse response = HandlerResponse.builder().setObjectBody(avengerCreated).build();
 		
