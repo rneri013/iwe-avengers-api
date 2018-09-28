@@ -1,5 +1,44 @@
-22:29:41.258 karate.env system property was: null 
-22:29:41.600 request:
+22:20:26.091 karate.env system property was: null 
+22:20:27.929 request:
+1 > GET https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/anyid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:20:28.551 response time in milliseconds: 622
+1 < 401
+1 < Connection: keep-alive
+1 < Content-Length: 26
+1 < Content-Type: application/json
+1 < Date: Fri, 28 Sep 2018 01:20:27 GMT
+1 < x-amz-apigw-id: N6E6VGocIAMFT9A=
+1 < x-amzn-ErrorType: UnauthorizedException
+1 < x-amzn-RequestId: aeda445a-c2bc-11e8-9513-47fefcf4dd05
+{"message":"Unauthorized"}
+
+22:20:28.597 karate.env system property was: null 
+22:20:29.754 request:
+1 > GET https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/avenger-not-found
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJuQ3hja1BmVE1MSzdOTVk1ckloUDJhWTNlZUlCNXVpb09HY05rZEorcXRnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkMTQwYTFiYS01OThlLTQ2NGItYmY2ZS1iNTY0ZGIyMjZiZjEiLCJhdWQiOiIyZGpydWM3OGF1MXVoZTVjYmlqdnYyN25uNyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImFmNzMwMTkzLWMyYmMtMTFlOC05ZDA3LTgzNzNjZjE3YTNhZSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM4MDk3NjI4LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9YemRIUTRMQlIiLCJjb2duaXRvOnVzZXJuYW1lIjoicm5lcmkiLCJleHAiOjE1MzgxMDEyMjgsImlhdCI6MTUzODA5NzYyOCwiZW1haWwiOiJyZW5hbnJ6bnRAZ21haWwuY29tIn0.MfFBVWP6Zi4V6S_t_fO4Q87huo1I8DndNq-TNgN_IeG75dt28fvnXZNXTYj7qZgG36W7eumgKOYvOT3R7LhMklV9W227oe3fzLWsxocBE6xtL-6OEAZP5poiAtuNLW1TrK4s31eMfO-ZvifPEczoUSaUoD7M8jS9Ttgd9SpPlVSKjlqtF92ENdSBcO9kYHDO8Xfy_dcTgNFeocGMTbmkokF46S3b_8gUsmVxV82DVDLOBsHtUubB5TT1IhTvWdQMOQ0dR5_zvRIJrKskqctbWvjhZya_te3G4NI0prRNgdZLHVfUdXkDVj6kyZRtUsxqCGyfyWdGMzb802dbJ1pZdw
+1 > Connection: Keep-Alive
+1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:20:35.535 response time in milliseconds: 5781
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 313
+1 < Content-Type: application/json
+1 < Date: Fri, 28 Sep 2018 01:20:34 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bad81dd-d7cebd14017e455406f6537c;Sampled=0
+1 < x-amz-apigw-id: N6E6mHcqoAMFhlw=
+1 < x-amzn-RequestId: afd98b01-c2bc-11e8-a641-057d1834a9ba
+{"errorMessage":"[NotFound] - Avenger id: avenger-not-found","errorType":"com.iwe.avengers.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:26)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+
+22:20:35.548 karate.env system property was: null 
+22:20:36.676 request:
 1 > POST https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -9,64 +48,38 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:29:42.340 response time in milliseconds: 739
+22:20:37.458 response time in milliseconds: 782
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 56
+1 < Content-Length: 102
 1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:42 GMT
-1 < X-Amzn-Trace-Id: Root=1-5ba98f86-b7cf13d05bc21e5040e496c0;Sampled=0
-1 < x-amz-apigw-id: NwNdEFwRoAMFeQQ=
-1 < x-amzn-RequestId: 7a6b99bc-c062-11e8-80de-792406e658db
-{"id":"IssoFoiGerado","name":null,"secretIdentity":null}
+1 < Date: Fri, 28 Sep 2018 01:20:36 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bad81e4-d132a14014cc0d321f38f838;Sampled=0
+1 < x-amz-apigw-id: N6E7sFpmIAMFxkA=
+1 < x-amzn-RequestId: b3fad399-c2bc-11e8-b292-39019280a90a
+{"id":"d70cf5c5-13a3-4c08-a0df-9f977979a224","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:29:42.343 assertion failed: path: $.name, actual: null, expected: '#string', reason: not a string
-Request(SearchAvengersHandler.java:1)"]}
+22:20:37.473 request:
+2 > GET https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/d70cf5c5-13a3-4c08-a0df-9f977979a224
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer eyJraWQiOiJuQ3hja1BmVE1MSzdOTVk1ckloUDJhWTNlZUlCNXVpb09HY05rZEorcXRnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkMTQwYTFiYS01OThlLTQ2NGItYmY2ZS1iNTY0ZGIyMjZiZjEiLCJhdWQiOiIyZGpydWM3OGF1MXVoZTVjYmlqdnYyN25uNyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImIzOWQ5ODYwLWMyYmMtMTFlOC04OTY4LTRkNzFmZjhjMzE5NiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM4MDk3NjM1LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9YemRIUTRMQlIiLCJjb2duaXRvOnVzZXJuYW1lIjoicm5lcmkiLCJleHAiOjE1MzgxMDEyMzUsImlhdCI6MTUzODA5NzYzNSwiZW1haWwiOiJyZW5hbnJ6bnRAZ21haWwuY29tIn0.P7fELnyg5HlHh6Csre1UN1Tr13J52FjrCDXYeplrQkxr009ldsZF71nmq_icETbmVIZXpqzrT0Obj3VaqFb3MZOIhokkj1sc-qnZEpQdK1a11sUmM3lA85FTpjud-985qRkNchODWHUq8cNccDVmkYBQVtcnQH_VmtYbLTR9rwgrDX6StQpqjf1gILO9X0243eVHrfD3lenRztr7RvhbKUJcQqjL4YZkJV6QeSYWQai_74AjCRNicwb_EiZfSRoqElVXJESmhZ-lwcJkQvLyyrCWlQRVt0g3pzROCpbz2QQVnpcQVQOePF-uSDQ9KPU_zlgFuqB3iPQ5AzV06v_dQg
+2 > Connection: Keep-Alive
+2 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:29:33.790 karate.env system property was: null 
-22:29:33.794 request:
-1 > GET https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+22:20:38.169 response time in milliseconds: 696
+2 < 200
+2 < Connection: keep-alive
+2 < Content-Length: 102
+2 < Content-Type: application/json
+2 < Date: Fri, 28 Sep 2018 01:20:37 GMT
+2 < X-Amzn-Trace-Id: Root=1-5bad81e5-3704fff09866ad68318d0550;Sampled=0
+2 < x-amz-apigw-id: N6E70Hu_IAMFkTw=
+2 < x-amzn-RequestId: b475a8c5-c2bc-11e8-bd29-d1e6afd38c3e
+{"id":"d70cf5c5-13a3-4c08-a0df-9f977979a224","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:29:34.248 response time in milliseconds: 454
-1 < 200
-1 < Connection: keep-alive
-1 < Content-Length: 85
-1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:34 GMT
-1 < X-Amzn-Trace-Id: Root=1-5ba98f7e-ea2f609e896d575ad4cd4eac;Sampled=0
-1 < x-amz-apigw-id: NwNbzHGRoAMF-xg=
-1 < x-amzn-RequestId: 75988df1-c062-11e8-9a17-335c5f2df816
-{"id":"aaaa-bbbb-cccc-dddd","name":"Captain America","secretIdentity":"Steve Rogers"}
-
-22:29:34.268 karate.env system property was: null 
-22:29:34.273 request:
-1 > POST https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Content-Length: 58
-1 > Content-Type: application/json; charset=UTF-8
-1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"name":"Captain America","secretIdentity":"Steve Rogers"}
-
-22:29:34.731 response time in milliseconds: 457
-1 < 201
-1 < Connection: keep-alive
-1 < Content-Length: 56
-1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:35 GMT
-1 < X-Amzn-Trace-Id: Root=1-5ba98f7f-137bee322aa30abc92445128;Sampled=0
-1 < x-amz-apigw-id: NwNb3EWdoAMFfyw=
-1 < x-amzn-RequestId: 75e1a4d3-c062-11e8-ae29-375022d95cfb
-{"id":"IssoFoiGerado","name":null,"secretIdentity":null}
-
-22:29:34.735 assertion failed: path: $.name, actual: null, expected: '#string', reason: not a string
-22:29:34.748 karate.env system property was: null 
-22:29:34.751 request:
+22:20:38.176 karate.env system property was: null 
+22:20:39.262 request:
 1 > POST https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -76,35 +89,95 @@ Request(SearchAvengersHandler.java:1)"]}
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America"}
 
-22:29:35.214 response time in milliseconds: 462
+22:20:39.728 response time in milliseconds: 466
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:35 GMT
-1 < x-amz-apigw-id: NwNb8F9ToAMFxgg=
-1 < x-amzn-RequestId: 762bf3ed-c062-11e8-a76c-6fea81f2fc6d
+1 < Date: Fri, 28 Sep 2018 01:20:38 GMT
+1 < x-amz-apigw-id: N6E8FHizoAMF20g=
+1 < x-amzn-RequestId: b5812567-c2bc-11e8-9ac0-f3745a247ef8
 {"message": "Invalid request body"}
 
-22:29:35.227 karate.env system property was: null 
-22:29:35.229 request:
-1 > DELETE https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
+22:20:39.743 karate.env system property was: null 
+22:20:40.833 request:
+1 > POST https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 47
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Hulk","secretIdentity":"Bruce Banner"}
+
+22:20:41.355 response time in milliseconds: 522
+1 < 201
+1 < Connection: keep-alive
+1 < Content-Length: 91
+1 < Content-Type: application/json
+1 < Date: Fri, 28 Sep 2018 01:20:40 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bad81e8-75fc04f088ec5fa84787c2bc;Sampled=0
+1 < x-amz-apigw-id: N6E8VG9zIAMFcVA=
+1 < x-amzn-RequestId: b673e9bb-c2bc-11e8-adeb-a73f53676438
+{"id":"89fc1910-f2c3-4a7a-9dbd-87e300f7f1f5","name":"Hulk","secretIdentity":"Bruce Banner"}
+
+22:20:41.370 request:
+2 > DELETE https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/89fc1910-f2c3-4a7a-9dbd-87e300f7f1f5
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:20:42.121 response time in milliseconds: 751
+2 < 204
+2 < Connection: keep-alive
+2 < Content-Length: 0
+2 < Content-Type: application/json
+2 < Date: Fri, 28 Sep 2018 01:20:41 GMT
+2 < X-Amzn-Trace-Id: Root=1-5bad81e9-b430a47a28e2af6b6312f013;Sampled=0
+2 < x-amz-apigw-id: N6E8aEOhoAMF6QQ=
+2 < x-amzn-RequestId: b6c342c9-c2bc-11e8-83e2-17637aee5837
+
+22:20:42.133 request:
+3 > GET https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/89fc1910-f2c3-4a7a-9dbd-87e300f7f1f5
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Bearer eyJraWQiOiJuQ3hja1BmVE1MSzdOTVk1ckloUDJhWTNlZUlCNXVpb09HY05rZEorcXRnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkMTQwYTFiYS01OThlLTQ2NGItYmY2ZS1iNTY0ZGIyMjZiZjEiLCJhdWQiOiIyZGpydWM3OGF1MXVoZTVjYmlqdnYyN25uNyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImI2MTliYmIxLWMyYmMtMTFlOC04YWQzLTg5NzdhOWIxZTA0YiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM4MDk3NjQwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9YemRIUTRMQlIiLCJjb2duaXRvOnVzZXJuYW1lIjoicm5lcmkiLCJleHAiOjE1MzgxMDEyNDAsImlhdCI6MTUzODA5NzY0MCwiZW1haWwiOiJyZW5hbnJ6bnRAZ21haWwuY29tIn0.Q1FVgcIjWpLmG7e85fzgDX4Rc-g5iXUaEy0W52fhhQb1wSHJeAYP7Gf3ZFg9EibXHSRLS-r9psBficiB2WP5OQ88rDPfuPtSNyNKaJw3uTQw5HR-hym1siq9oXAeUllIdN0RpZtCOPnR5LdGG-k42SLIaDDEQAWnLM-QN7-ZbReUzQwnmX8P_WfbYyFXx1J3zi0WCICANO_34wcuxcHdjMbp8y0oGuMcuAsuJvfSBzIQKVutjL61lT7bwJHLx7U_-TGeJd6dS6JEDil2FlVY6Tl3Mo7hphE5qA63X0rwFmCz4P4AUjtZ4g6ghF-TdNNbry1KUWJX0qtlRg10lMTGoA
+3 > Connection: Keep-Alive
+3 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+3 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:20:42.708 response time in milliseconds: 575
+3 < 404
+3 < Connection: keep-alive
+3 < Content-Length: 332
+3 < Content-Type: application/json
+3 < Date: Fri, 28 Sep 2018 01:20:41 GMT
+3 < X-Amzn-Trace-Id: Root=1-5bad81e9-3982fda038ded11065405540;Sampled=0
+3 < x-amz-apigw-id: N6E8iGexIAMFmiA=
+3 < x-amzn-RequestId: b73cdf82-c2bc-11e8-8408-4da3dcb4b73f
+{"errorMessage":"[NotFound] - Avenger id: 89fc1910-f2c3-4a7a-9dbd-87e300f7f1f5","errorType":"com.iwe.avengers.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:26)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+
+22:20:42.723 karate.env system property was: null 
+22:20:43.895 request:
+1 > DELETE https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/avenger-not-found
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:29:35.671 response time in milliseconds: 441
-1 < 204
+22:20:44.386 response time in milliseconds: 491
+1 < 404
 1 < Connection: keep-alive
-1 < Content-Length: 0
+1 < Content-Length: 309
 1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:36 GMT
-1 < x-amz-apigw-id: NwNcBHjBoAMFpcQ=
-1 < x-amzn-RequestId: 76744740-c062-11e8-be4b-e58bac9ea6c4
+1 < Date: Fri, 28 Sep 2018 01:20:43 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bad81eb-02b2b294883f497283eb1378;Sampled=0
+1 < x-amz-apigw-id: N6E8zELXIAMFjug=
+1 < x-amzn-RequestId: b8454e70-c2bc-11e8-b6a0-9755b5e17b0f
+{"errorMessage":"[NotFound] - Avenger id: avenger-not-found","errorType":"com.iwe.avengers.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:22)","com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:1)"]}
 
-22:29:35.681 karate.env system property was: null 
-22:29:35.684 request:
+22:20:44.386 karate.env system property was: null 
+22:20:45.494 request:
 1 > PUT https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/avenger-not-found
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -114,41 +187,62 @@ Request(SearchAvengersHandler.java:1)"]}
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:29:36.154 response time in milliseconds: 469
+22:20:46.277 response time in milliseconds: 783
 1 < 404
 1 < Connection: keep-alive
 1 < Content-Length: 313
 1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:36 GMT
-1 < X-Amzn-Trace-Id: Root=1-5ba98f80-73a6ec21606b2931fd85119b;Sampled=0
-1 < x-amz-apigw-id: NwNcFGYgIAMF5Yw=
-1 < x-amzn-RequestId: 76b8a40a-c062-11e8-9d25-113979b6448d
+1 < Date: Fri, 28 Sep 2018 01:20:45 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bad81ed-b35b59701ec2e608c78c0978;Sampled=0
+1 < x-amz-apigw-id: N6E9DGQeIAMFw-w=
+1 < x-amzn-RequestId: b938fcf8-c2bc-11e8-8675-d7010daec072
 {"errorMessage":"[NotFound] - Avenger id: avenger-not-found","errorType":"com.iwe.avengers.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.UpdateAvengersHandler.handleRequest(UpdateAvengersHandler.java:28)","com.iwe.avengers.UpdateAvengersHandler.handleRequest(UpdateAvengersHandler.java:1)"]}
 
-22:29:36.166 karate.env system property was: null 
-22:29:36.168 request:
-1 > PUT https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
+22:20:46.277 karate.env system property was: null 
+22:20:47.387 request:
+1 > POST https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 58
+1 > Content-Length: 43
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Captain","secretIdentity":"Steve"}
+
+22:20:47.895 response time in milliseconds: 508
+1 < 201
+1 < Connection: keep-alive
+1 < Content-Length: 87
+1 < Content-Type: application/json
+1 < Date: Fri, 28 Sep 2018 01:20:47 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bad81ef-b62ee19c2fc2e4645bb7c238;Sampled=0
+1 < x-amz-apigw-id: N6E9WEbVoAMFQxA=
+1 < x-amzn-RequestId: ba5b35ab-c2bc-11e8-bd6c-e71becb09050
+{"id":"593e904c-1c78-458d-a080-ad0cd7ae05b2","name":"Captain","secretIdentity":"Steve"}
+
+22:20:47.910 request:
+2 > PUT https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/593e904c-1c78-458d-a080-ad0cd7ae05b2
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 58
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: xg1k3ss99d.execute-api.us-east-1.amazonaws.com
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:29:36.630 response time in milliseconds: 460
-1 < 200
-1 < Connection: keep-alive
-1 < Content-Length: 85
-1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:37 GMT
-1 < X-Amzn-Trace-Id: Root=1-5ba98f81-27e3e186b3a2ee1a2fb8469a;Sampled=0
-1 < x-amz-apigw-id: NwNcKE8goAMFo1A=
-1 < x-amzn-RequestId: 770319cd-c062-11e8-a7d7-87818bbce815
-{"id":"aaaa-bbbb-cccc-dddd","name":"Captain America","secretIdentity":"Steve Rogers"}
+22:20:48.421 response time in milliseconds: 510
+2 < 200
+2 < Connection: keep-alive
+2 < Content-Length: 102
+2 < Content-Type: application/json
+2 < Date: Fri, 28 Sep 2018 01:20:47 GMT
+2 < X-Amzn-Trace-Id: Root=1-5bad81ef-fc1a60a232041bce853acd1d;Sampled=0
+2 < x-amz-apigw-id: N6E9cEwDIAMF3AQ=
+2 < x-amzn-RequestId: baaab558-c2bc-11e8-ba24-e388d463fdc1
+{"id":"593e904c-1c78-458d-a080-ad0cd7ae05b2","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:29:36.643 karate.env system property was: null 
-22:29:36.645 request:
+22:20:48.427 karate.env system property was: null 
+22:20:49.535 request:
 1 > PUT https://xg1k3ss99d.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -158,163 +252,17 @@ Request(SearchAvengersHandler.java:1)"]}
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America"}
 
-22:29:37.089 response time in milliseconds: 444
+22:20:49.975 response time in milliseconds: 440
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Tue, 25 Sep 2018 01:29:37 GMT
-1 < x-amz-apigw-id: NwNcPGvUoAMFhVw=
-1 < x-amzn-RequestId: 774c30cb-c062-11e8-a8c2-df235ddee80c
+1 < Date: Fri, 28 Sep 2018 01:20:49 GMT
+1 < x-amz-apigw-id: N6E9sE6qoAMFsfQ=
+1 < x-amzn-RequestId: bb9e3d16-c2bc-11e8-9f52-99bcac1737d4
 {"message": "Invalid request body"}
 
-per no-pad">
-            <div class="flex-col">
-                <div class="error-copy">
-                    <h1>404 Page Not Found</h1>
-                    <h6></h6>
-                    <p>Check that you typed the address correctly, go back to your previous page or try using our site search
-                        to find something specific.</p>
-                </div>
-            </div>
-            <div class="flex-col toAnimate no-pad">
-                <div class="error-image-animate"></div>
-            </div>
-        </div>
-        <script src="https://i.annihil.us/u/prod/marvel/html_blocks_assets/error-pages/terrigen/prod/js/main-ec0b804c01.js"></script>
-    </section>
-    <footer class="static-footer">
-        <nav>
-            <ol>
-                <a href="https://disneytermsofuse.com/">Terms of Use</a>
-                <a href="https://disneyprivacycenter.com/">Privacy Policy</a>
-                <a href="https://disneyprivacycenter.com/notice-to-california-residents">Your California Privacy Rights</a>
-                <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a>
-            </ol>
-            <ol>
-                <a href="/corporate/license_tou">License Agreement</a>
-                <a href="https://preferences-mgr.truste.com/?pid=disney01&aid=marvel01&type=marvel">Internet-Based Ads</a>
-                <a href="/corporate/insider_terms">Marvel Insider Terms</a>
-                <a>&copy; 2018 MARVEL</a>
-            </ol>
-            <style type="text/css">
-                footer.static-footer {
-                    width: 100%;
-                }
-
-                footer.static-footer nav {
-                    max-width: 1240px;
-                    margin: 0 auto;
-                    padding: 40px 30px 20px;
-                    display: flex;
-                    flex-wrap: wrap;
-                }
-
-                footer.static-footer nav ol {
-                    flex: 1;
-                    display: flex;
-                    flex-wrap: wrap;
-                }
-
-                footer.static-footer nav ol:first-of-type {
-                    padding-right: 15px;
-                }
-
-                footer.static-footer nav ol:last-of-type {
-                    padding-left: 15px;
-                }
-
-                footer.static-footer nav ol a {
-                    flex: 0 0 100%;
-                    font-size: 12px;
-                    margin-bottom: 15px;
-                    color: #c3c3c3 !important;
-                    text-decoration: none !important;
-                }
-
-                @media screen and (min-width: 841px) {
-                    footer.static-footer nav ol a {
-                        flex: 1;
-                        padding: 0 10px 0 20px;
-                        text-align: center;
-                    }
-
-                    footer.static-footer nav ol:first-of-type,
-                    footer.static-footer nav ol:last-of-type {
-                        padding: 0;
-                    }
-                }
-            </style>
-        </nav>
-    </footer>
-    <script type="text/javascript">_satellite.track('errorPageLoad'); _satellite.pageBottom();</script>
-</body>
-
-</html>
-
-21:18:25.768 xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 58; columnNumber: 3; O tipo de elemento link" deve ser encerrado pela tag final correspondente "</link>".
-21:18:25.777 status code was: 404, expected: 200, response time: 1626, url: https://www.marvel.com/avengers/aaaa-bbbb-cccc-dddd, response: <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Marvel.com</title>
-    <meta charset="utf-8" />
-    <meta name="robots" content="noindex,nofollow">
-    <meta name="description" content="Marvel.com is the source for Marvel comics, digital comics, comic strips, and more featuring Iron Man, Spider-Man, Hulk, X-Men and all your favorite superheroes.">
-    <meta name="twitter:description" content="Marvel.com is the source for Marvel comics, digital comics, comic strips, and more featuring Iron Man, Spider-Man, Hulk, X-Men and all your favorite superheroes.">
-    <meta property="og:description" content="Marvel.com is the source for Marvel comics, digital comics, comic strips, and more featuring Iron Man, Spider-Man, Hulk, X-Men and all your favorite superheroes.">
-    <!-- Google Search Console config -->
-    <meta name="google-site-verification" content="f1YswNYUVb2d0dy07Y7soM6FzZ3rQ4xsfVV-11yCcQc">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
-    <meta name="theme-color" content="#eb2328">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Icons and favicons -->
-    <link rel="icon" href="https://i.annihil.us/u/prod/misc/favicon/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="https://i.annihil.us/u/prod/misc/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://i.annihil.us/u/prod/misc/favicon/apple-touch-icon-60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="https://i.annihil.us/u/prod/misc/favicon/apple-touch-icon-76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="https://i.annihil.us/u/prod/misc/favicon/apple-touch-icon-120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://i.annihil.us/u/prod/misc/favicon/apple-touch-icon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://i.annihil.us/u/prod/misc/favicon/apple-touch-icon-180.png">
-    <meta name="msapplication-TileImage" content="https://i.annihil.us/u/prod/misc/favicon/apple-touch-icon-152.png">
-    <meta name="twitter:site" content="@Marvel">
-    <meta property="og:site_name" content="Marvel.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:creator" content="@Marvel">
-    <meta property="fb:app_id" content="193166954153103">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="content-type" content="text/html;charset=utf-8">
-    <!-- Analytics-->
-    <script src="//assets.adobedtm.com/bc7edc03f3b671a5b00119b4d88ffade87a3e20f/satelliteLib-7e2bcd047fa8273c37190fbf382316c5c0b99379.js"></script>
-    <script>
-        window.digitalData = {
-            'content': null,
-            'pageInfo': {
-                'pageName': ''
-            },
-            'category': {
-                'businessunit': 'marveldotcom',
-                'contentType': 'error_page',
-                'pageType': 'errorpage',
-                'errorType': '404',
-                'pageId': '',
-                'siteSection': 'error',
-                'subSectionL2': '',
-                'subSectionL3': '',
-                'subSectionL4': '',
-            },
-        };
-    </script>
-    <!-- Assets -->
-    <link rel="stylesheet" type="text/css" href="https://i.annihil.us/u/prod/marvel/html_blocks_assets/error-pages/terrigen/prod/css/main-81ea9ddd1e.css">
-    <script src="https://i.annihil.us/u/prod/marvel/i/js/jquery-3.3.1.min.js"></script>
-</head>
-
-<body class="error-status-page">
-    <!-- This is an Apache served error page for status code: 404 -->
-    <header class="static-header">
+  <header class="static-header">
         <nav>
             <div class="upper-nav">
                 <ol>
